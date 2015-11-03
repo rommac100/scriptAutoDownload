@@ -10,26 +10,6 @@ with Browser('chrome') as browser:
     button.click()
     if browser.is_text_present('Settings'):
         print('')
-        if browser.is_text_present('Library'):
-            button2 = browser.find_by_id('footer_library')
-            button2.click()
-            if browser.is_text_present('Click on'):
-                button3 = browser.find_by_id('day_ok')
-                button3.click()
-                if browser.is_text_present('Select'):
-                    button4 = browser.find_by_id('day_ToggleSelectMode')
-                    button4.click()
-                    if browser.is_text_present('Select Alls'):
-                        print("")
-                    else:
-                        button5 = browser.find_by_id('day_SelectAll')
-                        button5.click()
-                        if browser.is_text_present('Downloads'):
-                            print('')
-                        else:
-                            button6 = browser.find_by_id('footer_download')
-                            button6.click()
-                            y = input()
     else:
         print("Found.")
         if browser.is_text_present('Library'):
